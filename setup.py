@@ -2,10 +2,12 @@
 from distutils.core import setup, Extension
 import numpy as np
 
-# render README.md on pypi
-from pathlib import Path
-this_directory = Path(__file__).parent
-long_description = (this_directory / "README.md").read_text()
+# render README.md as rST
+try:
+    import pypandoc
+    long_description = pypandoc.convert('README.md', 'rst')
+except(IOError, ImportError):
+    long_description = open('README.md').read()
 
 setup(name="approxmath",
       version="1.0.1",
@@ -14,7 +16,6 @@ setup(name="approxmath",
       author_email="brendan.ashworth@me.com",
       url="https://github.com/brendanashworth/approxmath",
       long_description=long_description,
-      long_description_content_type='text/markdown',
       ext_modules=[Extension(
           'approxmath', ['src/approxmath/approxmath.c'],
           extra_compile_args=["-Ofast", "-march=native", "-ffast-math"],
