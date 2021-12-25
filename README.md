@@ -16,7 +16,6 @@ If your program doesn't depend on the full precision of floating point operation
 | log | `5e-9` | 896 M/sec |
 | cos | `2e-10` | 470 M/sec |
 | sin | `2e-9` | 463 M/sec |
-|-----|--------|-----------|
 
 Benchmarks were run on a 2019 MacBook Pro (1.4 GHz Quad-Core Intel Core i5), with Python 3.9.9 and NumPy 1.21.4.
 

@@ -12,6 +12,7 @@ setup(name="approxmath",
       description="Fast approximate math functions: log, exp, sin, cos",
       author="Brendan Ashworth",
       author_email="brendan.ashworth@me.com",
+      url="https://github.com/brendanashworth/approxmath",
       long_description=long_description,
       long_description_content_type='text/markdown',
       ext_modules=[Extension(
