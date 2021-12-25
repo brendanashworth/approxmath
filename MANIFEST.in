@@ -1,0 +1,3 @@
+include src/approxmath/*
+include README.md
+include LICENSE
