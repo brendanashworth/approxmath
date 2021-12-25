@@ -23,26 +23,26 @@ Benchmarks were run on a 2019 MacBook Pro (1.4 GHz Quad-Core Intel Core i5), wit
 ### Drop-in Replacement
 
 ```python
->>> import approxmath as npa
->>> import numpy as np
+import approxmath as npa
+import numpy as np
 
->>> npa.sin(np.array([-np.pi/2, 0.0, np.pi/2]))
-array([-1.,  0.,  1.])
+npa.sin(np.array([-np.pi/2, 0.0, np.pi/2]))
+# array([-1.,  0.,  1.])
 
->>> npa.log(np.array([1.0, np.e, np.e**2]))
-array([4.53119942e-09, 1.00000000e+00, 2.00000000e+00])
+npa.log(np.array([1.0, np.e, np.e**2]))
+# array([4.53119942e-09, 1.00000000e+00, 2.00000000e+00])
 
->>> npa.cos(np.array([-2*np.pi/3, 0.0, 2*np.pi/3]))
-array([-0.5,  1. , -0.5])
+npa.cos(np.array([-2*np.pi/3, 0.0, 2*np.pi/3]))
+# array([-0.5,  1. , -0.5])
 
->>> npa.exp(np.array([-1., 0., 1.]))
-array([0.36787944, 1.        , 2.71828183])
+npa.exp(np.array([-1., 0., 1.]))
+# array([0.36787944, 1.        , 2.71828183])
 ```
 
 ### Installation
 
 ```sh
-pip install approxmath
+$ pip install approxmath
 ```
 
 `approxmath` is released under the MIT license.
