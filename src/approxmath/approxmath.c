@@ -4,6 +4,10 @@
 #define NPY_NO_DEPRECATED_API NPY_1_7_API_VERSION
 #include <numpy/arrayobject.h>
 #include <math.h>
+/* in case M_PI is not enabled */
+#ifndef M_PI
+#define M_PI 3.141592653589793238462643383
+#endif
 
 #include "simd_math_prims.h"
 
