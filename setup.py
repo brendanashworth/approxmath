@@ -1,5 +1,5 @@
 #!/usr/bin/env python
-from distutils.core import setup, Extension
+from setuptools import setup, Extension, find_packages
 import numpy as np
 
 # render README.md as rST
@@ -16,8 +16,10 @@ setup(name="approxmath",
       author_email="brendan.ashworth@me.com",
       url="https://github.com/brendanashworth/approxmath",
       long_description=long_description,
+      package_dir = {'': 'src'},
+      packages=['approxmath/aesara'],
       ext_modules=[Extension(
-          'approxmath', ['src/approxmath/approxmath.c'],
+          'approxmath.np', ['src/approxmath/np/approxmath.c'],
           extra_compile_args=["-Ofast", "-march=native", "-ffast-math"],
           include_dirs=[np.get_include()])]
 )

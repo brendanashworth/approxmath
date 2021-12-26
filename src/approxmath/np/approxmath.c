@@ -27,7 +27,7 @@ static PyMethodDef methods[] = {
 
 static struct PyModuleDef moduledef = {
     PyModuleDef_HEAD_INIT,
-    "approxmath",
+    "np",
     "Fast approximate math functions: log, exp, sin, cos",
     -1, /* module size, but no gc */
     methods,
@@ -37,7 +37,7 @@ static struct PyModuleDef moduledef = {
 };
 
 // initialize the module
-PyMODINIT_FUNC PyInit_approxmath(void) {
+PyMODINIT_FUNC PyInit_np(void) {
     PyObject* m = PyModule_Create(&moduledef);
     import_array();
     return m;

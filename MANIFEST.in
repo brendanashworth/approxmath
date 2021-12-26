@@ -1,3 +1,4 @@
 include src/approxmath/*
+include src/approxmath/aesara/*
 include README.md
 include LICENSE

@@ -1,4 +1,4 @@
-import approxmath as npa
+import approxmath.np as npa
 import math
 import numpy as np
 import pytest

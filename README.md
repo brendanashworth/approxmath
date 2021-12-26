@@ -22,7 +22,7 @@ Benchmarks were run on a 2019 MacBook Pro (1.4 GHz Quad-Core Intel Core i5), wit
 ### Drop-in Replacement
 
 ```python
-import approxmath as npa
+import approxmath.np as npa
 import numpy as np
 
 npa.sin(np.array([-np.pi/2, 0.0, np.pi/2]))
