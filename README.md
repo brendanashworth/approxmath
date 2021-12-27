@@ -19,7 +19,7 @@ If your program doesn't depend on the full precision of floating point operation
 
 Benchmarks were run on a 2019 MacBook Pro (1.4 GHz Quad-Core Intel Core i5), with Python 3.9.9 and NumPy 1.21.4.
 
-### Drop-in Replacement
+### Drop-in Replacement for NumPy
 
 ```python
 import approxmath.np as npa
@@ -37,6 +37,22 @@ npa.cos(np.array([-2*np.pi/3, 0.0, 2*np.pi/3]))
 npa.exp(np.array([-1., 0., 1.]))
 # array([0.36787944, 1.        , 2.71828183])
 ```
+
+### Drop-in Replacement for Aesara Tensor
+
+```python
+import approxmath.aesara as att
+import aesara.tensor as tt
+```
+
+Functional equivalents:
+
+| Aesara | Approxmath | Relative Speed-Up |
+|--------|------------|-------------------|
+| `tt.exp` | `att.exp` | 15x |
+| `tt.log` | `att.log` | 15x |
+| `tt.cos` | `att.cos` | 13x |
+| `tt.sin` | `att.sin` | 13x |
 
 ### Installation
 

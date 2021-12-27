@@ -10,7 +10,7 @@ except(IOError, ImportError):
     long_description = open('README.md').read()
 
 setup(name="approxmath",
-      version="1.0.1",
+      version="2.0.0",
       description="Fast approximate math functions: log, exp, sin, cos",
       author="Brendan Ashworth",
       author_email="brendan.ashworth@me.com",
